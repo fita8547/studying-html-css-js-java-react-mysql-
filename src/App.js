@@ -1,4 +1,10 @@
 import React, { useState, useEffect } from 'react';
+//리액트라는 폴더를 가져와서 React라는 이름을 부여하고 그속에서 이미저장된 함수인
+//useState,useEffect라는 함수를 가져온다는 뜻
+import './App.css'
+import GreetingCard from './components/GreetingCard'
+import ItemList from "./components/ItemList";
+
 
 function App() {
   const [name, setName] = useState("");
@@ -24,6 +30,7 @@ function App() {
   //사용자가 input에 글자를 입력할때마다 name상태를 실시간으로 바꿔주는 함수입니다.
   const handleInputChange = (e) => {
     setName(e.target.value);
+    
   };
 
   //인사하기 버튼 클릭시, greeting이라는 상태에서 인사말을 저장하는 코드 입니다.
@@ -48,16 +55,14 @@ function App() {
             placeholder="이름을 입력하세요"
             value={name}
             onChange={handleInputChange}
-            style={{ padding: '10px', margin: '10px' }}
           />
-          <br />
-          <button 
-            onClick={handleGreetClick}
-            style={{ padding: '10px 20px', margin: '10px' }}
-          >
-            인사하기
+          
+          <button onClick={handleGreetClick}>인사하기
           </button>
-          {greeting && <p style={{ color: 'blue', fontSize: '18px' }}>{greeting}</p>}
+          <GreetingCard message={greeting}/>
+          {/*html태그화 시킨 리액트 컴포넌트기능이 적용된 자바스크립트 파일*/}
+          {/*Greeting*/}
+          <ItemList/>
         </div>
       )}
     </div>

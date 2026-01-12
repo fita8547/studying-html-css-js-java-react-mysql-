@@ -26,6 +26,7 @@
             };
 
             const handleGreetClick = () => {
+                console.log("버튼 클릭됨, 현재 이름:", name);
                 setGreeting(`${name}님, 리액트 세계에 오신 걸 환영합니다!`);
             };
 
@@ -57,7 +58,8 @@
             );
         }
 
-        ReactDOM.render(<App />, document.getElementById('root'));
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
     </script>
 </body>
 </html>
