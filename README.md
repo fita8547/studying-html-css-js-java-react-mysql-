@@ -20,9 +20,9 @@
 │   ├── src/
 │   │   ├── App.js      # React 컴포넌트 실습
 │   │   └── components/ # 컴포넌트 분리 학습
-│   └── simple.html     # CDN 방식 React 학습
-├── 기본 컴퓨터 지식      # 개발 기초 이론
-└── 리액트의 개념        # React 개념 정리
+│   │       ├── GreetingCard.js  # 인사말 컴포넌트
+│   │       └── ItemList.js      # 과일 리스트 컴포넌트
+└── README.md           # 프로젝트 설명서
 ```
 
 ## 🚀 현재 학습 진행상황
